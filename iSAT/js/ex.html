@@ -1,0 +1,64 @@
+<html>
+<head>
+<title></title>
+<script type="text/javascript">
+function GetOutput(){
+	var newArray=['A','B','C','A','E','B','E','D','C','A'];
+	var newArray2=['High','Average','Low','Average','Average','High','Low','High','High','Low'];
+	var mat=[];
+	var count=0;
+	for(var i=0;i<newArray.length;i++){
+		mat.push(newArray[i]);
+		mat.push(newArray2[i]);
+	}
+	/*for(var i=0;i<10;i++){
+		document.write(mat);
+	}*/
+	/*for(var i=0;i<20;i++){
+		document.write(mat[i]);
+		document.write("<br>");
+	}*/
+	//document.write(mat[1]);
+	//document.write(mat.slice(0,2));
+	
+	var lgt=mat.length;
+	var arr=[];
+	var nu=mat.length/2
+	for(var i=0;i<nu;i++){
+		arr[i]=mat.slice(0,2);
+		mat=mat.slice(2,lgt+1);
+		//arr[i]=mat.slice(0,2);
+		//document.write(mat.slice(0,2));
+	}
+	for(var i=0;i<nu;i++){
+		document.write(arr[i]+"<br>");
+	}
+	var i;
+	var j;
+	var countArray=[];
+	for(i = 0; i < arr.length; i++) {  
+        var count = 1;  
+        for(j = i+1; j < arr.length; j++) {  
+            if(arr[i][0]==arr[j][0] && arr[i][1]==arr[j][1]) {
+                countArray[j] = 0;    
+                count++;
+            }  
+        }  
+        if(countArray[i]!=0) {  
+            countArray[i] = count;  
+        }
+    }
+    for(var i = 0; i<arr.length; i++) {  
+      	if(countArray[i] != 0) {  
+      		var percentage = Math.round((countArray[i]/arr.length)*100);
+        	document.write(arr[i]+"-"+countArray[i]+"-"+percentage+"%"+"<br>");
+
+        }  
+    }  
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="GetOutput()">
+</body>
+</html>

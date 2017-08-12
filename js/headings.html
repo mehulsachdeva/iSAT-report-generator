@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Column Headers</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var data;
+ 
+  function handleFileSelect(evt) {
+    var file = evt.target.files[0];
+ 
+    Papa.parse(file, {
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        data = results;
+      }
+    });
+  }
+ 
+  $(document).ready(function(){
+    $("#csv-file").change(handleFileSelect);
+  });
+</script>
+</head>
+<body>
+<input type="file" id="csv-file" name="files"/>
+</body>
+</html>

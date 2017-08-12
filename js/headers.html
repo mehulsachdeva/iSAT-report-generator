@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Column Headers</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "C:/Users/user/Desktop/class.csv",
+        dataType: "text",
+        success: function(data) {processData(data);}
+     });
+});
+
+function processData(allText) {
+    var allTextLines = allText.split("\r");
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (var i=1; i<allTextLines.length; i++) {
+        var data = allTextLines[i].split(',');
+        if (data.length == headers.length) {
+
+            var tarr = [];
+            for (var j=0; j<headers.length; j++) {
+                tarr.push(headers[j]+":"+data[j]);
+            }
+            lines.push(tarr);
+        }
+    }
+    console.log(lines);
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="processData()">
+</body>
+</html>

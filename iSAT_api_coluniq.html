@@ -1,0 +1,19 @@
+<html>
+
+<div id="tabpage_2"></div>
+<button class="col-md-8 col-md-push-2 patternbtn refresh" id="restore1" style="margin-top:5%;">
+						<i class="icon  fa fa-refresh"></i> iSAT</button>
+
+<script src="./js/d3.min.js"></script>
+<script src="./js/iSAT_coluniq.js"></script>
+<script src="./js/preProcessing_coluniq.js"></script>
+
+<script>
+var csvData="student_id,Video,Assignment,Quiz\n1,viewed,viewed,Full grade\n3,viewed,viewed,Full grade\n14,NOT viewed,NOT viewed,Partial grade\n15,viewed,viewed,NOT attempted\n23,viewed,viewed,Partial grade";
+var objectKeys = ["student_id", "Video", "Assignment", "Quiz"];
+var data =  d3.csv.parse(csvData);
+parseCSV(objectKeys, data);
+
+</script>
+
+</html>

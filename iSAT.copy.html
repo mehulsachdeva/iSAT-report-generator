@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iSAT</title>
+	<meta name="description" content="iSAT helps users to trace educational dataset." />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<!-- Favicons (created with http://realfavicongenerator.net/)-->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="css/cardio.css">	
+	<!-- Add IntroJs styles -->
+	<link rel="stylesheet" type="text/css" href="css/introjs.css">
+</head>
+
+<body onload="startIntro()">
+	<div class="preloader">
+		<img src="img/loader.gif" alt="Preloader image">
+	</div>
+	
+	<section id="SATisfy" class="section">
+		<div class="container">
+			<div class="row text-center title">
+				<h4 class="light muted">SATisfy your Dataset</h4>
+				<p class="light muted">upload your dataset in csv format and explicate patterns across three recorded attributes</p>
+				<button class="patternbtn refresh" onclick="#graph-area"><input type="file" id="uploader" accept=".csv"></button>
+			</div>
+		</div>
+	</section>
+	<section id="graph-area" class="section">
+		<div class="container">
+			<div class="row">
+					<div class="col-md-9" id="tabpage_2"></div>
+					<div class="col-md-3">
+						<div class="row-fluid text-center">
+						<button id="UI-demo" class="patternbtn demo" onclick="startIntro()"><i class="icon  fa fa-lightbulb-o"> what is it?</i></button></div>
+						<div class="row-fluid text-center" id="pattern-panel"><h5 class="light muted">Explicate Patterns</h5></div>
+						<div class="row-fluid">
+							<button id="align3" class="col-md-12 patternbtn align3"><i class="icon fa fa-group "></i> Aligned across 3 phases <i class="icon fa fa-group "></i> </button></div>
+							<div class="row-fluid">
+								<button id="starBurst" class="col-md-6 patternbtn align2 favor"><i class="icon  fa fa-thumbs-up"></i> Star Bursting</button>
+								<button id="slide" class="col-md-6 patternbtn align2 unfavor"><i class="icon  fa fa-thumbs-down"></i> Sliding</button>
+							</div>
+							<div class="row-fluid">
+								<button id="align2" class="col-md-12 patternbtn align2"><i class="icon fa fa-user "></i> Aligned between 2 phases <i class="icon fa fa-user "></i></button>
+							</div>
+							<div class="row-fluid">
+								<button id="switch" class="col-md-6 patternbtn align2"><i class="icon fa fa-random"> Switches</i></button>
+								<button id="returnP" class="col-md-6 patternbtn align3"><i class="icon fa fa-rotate-left"> Returns</i></button>
+							</div>
+							<div class="row-fluid">
+								<button id="voidS" class="col-md-12 patternbtn align2"><i class="icon fa fa-circle-o-notch"> Voids in transitions</i></button>
+							</div>
+							<div class="row-fluid">
+	
+								<button id="attr" class="col-md-6 patternbtn ser"><i class="icon fa fa-magnet"> Attracted to?</i></button>
+								<button id="ePattern" class="col-md-6 patternbtn ser"><i class="icon fa fa-search"> Specific Pattern</i></button>
+							</div>
+							<div class="row-fluid">						
+							<button class="col-md-8 col-md-push-2 patternbtn refresh" id="restore1" style="margin-top:5%;">
+						<i class="icon  fa fa-refresh"></i> iSAT</button>
+							</div>
+							<div id="textL" class="col-md-12"></div>
+						</div>
+					</div>
+
+					
+					<svg class="chart0"></svg>
+					<svg class="chart1"></svg>
+
+				</div>
+			</div>
+		</section>
+
+			<div class="container">
+				<div class="row text-center-mobile">
+					<div class="col-sm-8">
+						<p style="font-size:10pt">code lisenced under <a href="http://opensource.org/licenses/mit-license.html">MIT lisence</a><br>concept: Rwitajit Majumdar <br>Development: Ram Karnani, Kavya Alse, Kumar Ayush, Rwitajit Majumdar<br>Guidance: Prof. Sridhar Iyer &amp; Prof. Aniruddha Joshi. <br>Website Powered by <a href="http://www.phir.co/">PHIr</a></p>
+					</div>
+				</div>
+			</div>
+		<!-- Holder for mobile navigation -->
+		<div class="mobile-nav">
+			<ul>
+			</ul>
+			<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		</div>
+		<!-- Scripts -->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/typewriter.js"></script>
+		<script src="js/jquery.onepagenav.js"></script>
+		<script src="js/main.js"></script>
+		<script src="./js/intro-text.js"></script>
+		<script src="./js/intro.js"></script>
+
+
+		<!-- The code bit from iSAT html -->
+		<!-- for testing in div embed -->
+
+		<script src="./js/d3.min.js"></script>
+		<script src="./js/iSAT_coluniq.js"></script>
+		<script src="./js/preProcessing_coluniq.js"></script>
+
+		<script>
+			var criteriaCount = 0;
+			var critname = [""];
+			var critval = [0];
+			$(document).ready(function(){
+
+	//alert("onload");
+
+	document.getElementById('uploader').addEventListener('change', upload, false);
+	/*
+	var noOfCriteria = document.getElementById("noOfCriteria");
+	noOfCriteria.addEventListener('blur', function(e) {                                //***********modified***************
+	//alert("blurred");
+		window.criteriaCount =  parseInt(document.getElementById("noOfCriteria").value);
+		//alert(window.criteriaCount);
+		for(i=0; i<window.criteriaCount; i++)
+		{
+			ival = i+1;
+			$("#criteriaSpace").append( "<p> " + ival + ". Criteria Name: <input type=\"text\" id=\"critname"+ ival +"\" /> " + 
+			"Criteria Value: <input type=\"text\" id=\"critval"+ ival +"\" />  </p>" );
+		}
+	$("#criteriaSpace").append("<input type=\"button\" id=\"processCSV\" value=\"Process\" /> ");
+	});
+	document.getElementById('processCSV').onclick = fun();
+	*/
+/*
+	var Miso = require("miso.dataset");
+	var ds = new Miso.Dataset({
+  importer : Miso.Dataset.Importers.GoogleSpreadsheet,
+  parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
+  key : "1WMaDJ6qKeknxhJZYi4uMfeDsgcRZe-SGUGnzE4gxmu4",
+  worksheet : "1"
+
+});
+
+ds.fetch({ 
+  success : function() {
+    log(ds);
+  },
+  error : function() {
+    log("Are you sure you are connected to the internet?");
+  }
+});
+*/
+});
+
+//https://docs.google.com/spreadsheets/d/1WMaDJ6qKeknxhJZYi4uMfeDsgcRZe-SGUGnzE4gxmu4/pubhtml
+
+function browserSupportFileUpload() {
+	var isCompatible = false;
+	if (window.File && window.FileReader && window.FileList && window.Blob) {
+		isCompatible = true;
+	}
+	return isCompatible;
+}
+
+function upload(evt) {
+	if (!browserSupportFileUpload()) {
+		alert('The File APIs are not fully supported in this browser!');
+	} else {
+
+		var data = null;
+		var file = evt.target.files[0];
+
+            //console.log(file);
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function(event) {
+            	var csvData = event.target.result;
+				//console.log(csvData);
+				//console.log(typeof(csvData));
+				
+				data =  d3.csv.parse(csvData);
+
+				//console.log(data);
+				var objectKeys = $.map(data[0], function(value, key) {
+					return key;
+				});
+				cou = objectKeys.length; 	//total no.of column values
+				if (data && data.length > 0) {
+                 // alert('Imported -' + data.length + '- rows successfully!');
+                 parseCSV(objectKeys, data);
+             } else {
+             	alert('No data to import!');
+             }
+         };
+         reader.onerror = function() {
+         	alert('Unable to read ' + file.fileName);
+         };
+     }
+ }
+</script>
+
+</body>
+
+</html>

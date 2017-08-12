@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iSAT</title>
+	<meta name="description" content="iSAT helps users to trace educational dataset." />
+	<meta name="keywords" content="html template, css, free, one page, gym, fitness, web design" />
+	<meta name="author" content="Luka Cvetinovic for Codrops" />
+	<!-- Favicons (created with http://realfavicongenerator.net/)-->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="img/favicons/manifest.json">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#00a8ff">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="css/owl.css">
+	<!-- Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.1.0/css/font-awesome.min.css">
+	<!-- Elegant Icons -->
+	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
+	<!-- Main style -->
+	<link rel="stylesheet" type="text/css" href="css/cardio.css">
+
+	
+</head>
+
+<body onload="parseCSV(opt3,2)">
+	<div class="preloader">
+		<img src="img/loader.gif" alt="Preloader image">
+	</div>
+	<nav class="navbar">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo.png" data-active-url="img/logo-active.png" alt=""></a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right main-nav">
+					<li><a href="#intro"><i class="icon  fa fa-chevron-circle-up"></i></a></li>
+					<li><a href="#func">function</a></li>
+					<li><a href="#form">form</a></li>
+					<li><a href="#cases">outcomes</a></li>
+					<li><a href="./iSAT.html" class="btn btn-blue">SATisfy your data</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<header id="intro">
+		<div class="container">
+			<div class="table">
+				<div class="header-text">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<h3 class="light white typed">interactive Stratified Attribute Tracking Diagram</h3>
+							<!-- <h1 class="white typed">iSAT</h1> -->
+							<span class="typed-cursor">~</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<!-- <div class="cut cut-top"></div> -->
+		<div class="container">
+			<div class="row intro-tables">
+				<div class="col-md-4">
+					<div class="intro-table intro-table-hover" style="background-image: url('./img/table-1.jpg');">
+						<h4 class="white heading small-pt">iSAT for researchers</h4>
+						<div class="bottom">
+							<!-- <h4 class="white heading small-heading no-margin regular">View Case studies</h4> -->
+							<!-- <h4 class="white heading small-pt"></h4> -->
+							<a href="#" class="btn btn-white-fill expand">View Case studies</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="intro-table intro-table-hover" style="background-image: url('./img/table-2.jpg');">
+						<!-- <h5 class="white heading hide-hover">iSAT for instructors</h5> -->
+						<h4 class="white heading small-pt">iSAT for instructors</h4>
+						<div class="bottom">
+							<a href="./example-icce2015.html" class="btn btn-white-fill expand">View Case studies</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="intro-table intro-table-third">
+						<h5 class="white heading">Mapped Transitions</h5>
+						<div class="owl-testimonials bottom">
+							<div class="item">
+								<h4 class="white heading content">Student Engagement</h4>
+								<h5 class="white heading light author">Large CS101 class</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Student Acheivements across tests and assignments</h4>
+								<h5 class="white heading light author">Inquiry based Data Structure class</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Online Asynchronous Learning data</h4>
+								<h5 class="white heading light author">Online workshops with tangible outcomes</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="func" class="section section-padded blue-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="owl-twitter owl-carousel">
+						<div class="item text-center">
+							<h4 class="white light">The Functionalities of iSAT</h4>
+							<h4 class="light-white light">tracing migrations in dataset</h4>
+						</div>
+						<div class="item text-center">
+							<h4 class="white light">How is it useful</h4>
+							<h4 class="light-white light">researchers and instructors have used it</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="form" class="section section-padded blue-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="owl-twitter owl-carousel">
+						<div class="item text-center">
+							<h4 class="white light">Visual Design </h4>
+							<h4 class="light-white light">gestalt's principle</h4>
+						</div>
+						<div class="item text-center">
+							<h4 class="white light">Interaction Design </h4>
+							<h4 class="light-white light">Ben shneiderman principles</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<h3 class="white">iSAT</h3>
+				<form action="" class="popup-form">
+					<input type="text" class="form-control form-white" placeholder="Full Name">
+					<input type="text" class="form-control form-white" placeholder="Email Address">
+					<!-- <div class="dropdown">
+						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Pricing Plan
+						</button>
+						<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
+							<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
+							<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
+							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
+							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
+						</ul>
+					</div> -->
+					<div class="checkbox-holder text-left">
+						<div class="checkbox">
+							<input type="checkbox" value="None" id="squaredOne" name="check" />
+							<label for="squaredOne"><span>iSAT seems useful to me.</span></label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<!-- <div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Reserve a Free Trial Class!</h3>
+					<h5 class="light regular light-white">Shape your body and improve your health.</h5>
+					<a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
+				</div> -->
+				<div class="col-sm-6 text-center-mobile">
+					<h3 class="white">Provide Feedback 
+					<button data-toggle="modal" data-target="#modal1" class="btn ">
+					<span class="open-blink"></span></button></h3>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-8">
+					<p style="font-size:10pt">code lisenced under <a href="http://opensource.org/licenses/mit-license.html">MIT lisence</a><br>concept: Rwitajit Majumdar <br>Development: Ram Karnani, Kavya Alse, Kumar Ayush, Rwitajit Majumdar<br>Guidance: Prof. Sridhar Iyer &amp; Prof. Aniruddha Joshi. <br>Website Powered by <a href="http://www.phir.co/">PHIr</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+		<ul>
+		</ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Scripts -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/typewriter.js"></script>
+	<script src="js/jquery.onepagenav.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- The code bit from iSAT html -->
+<!-- for testing in div embed -->
+<!-- 
+	<script src="./js/biPartiteMOD.js"></script>
+	<script src="./js/opt3.js"></script>
+	<script src="./js/dump.js"></script>
+ -->
+	<script src="./js/d3.min.js"></script>
+  	<!--<script src="./js/iSAT_coluniq.js"></script>
+  	<script src="./js/preProcessing_coluniq.js"></script>
+	<script>
+		var criteriaCount = 0;
+		var critname = [""];
+		var critval = [0];
+		$(document).ready(function(){
+
+	// alert("onload");
+
+	document.getElementById('uploader').addEventListener('change', upload, false);
+	/*
+	var noOfCriteria = document.getElementById("noOfCriteria");
+	noOfCriteria.addEventListener('blur', function(e) {                                //***********modified***************
+	//alert("blurred");
+		window.criteriaCount =  parseInt(document.getElementById("noOfCriteria").value);
+		//alert(window.criteriaCount);
+		for(i=0; i<window.criteriaCount; i++)
+		{
+			ival = i+1;
+			$("#criteriaSpace").append( "<p> " + ival + ". Criteria Name: <input type=\"text\" id=\"critname"+ ival +"\" /> " + 
+			"Criteria Value: <input type=\"text\" id=\"critval"+ ival +"\" />  </p>" );
+		}
+	$("#criteriaSpace").append("<input type=\"button\" id=\"processCSV\" value=\"Process\" /> ");
+	});
+	document.getElementById('processCSV').onclick = fun();
+	*/
+/*
+	var Miso = require("miso.dataset");
+	var ds = new Miso.Dataset({
+  importer : Miso.Dataset.Importers.GoogleSpreadsheet,
+  parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
+  key : "1WMaDJ6qKeknxhJZYi4uMfeDsgcRZe-SGUGnzE4gxmu4",
+  worksheet : "1"
+
+});
+
+ds.fetch({ 
+  success : function() {
+    log(ds);
+  },
+  error : function() {
+    log("Are you sure you are connected to the internet?");
+  }
+});
+*/
+});
+
+//https://docs.google.com/spreadsheets/d/1WMaDJ6qKeknxhJZYi4uMfeDsgcRZe-SGUGnzE4gxmu4/pubhtml
+
+function browserSupportFileUpload() {
+        var isCompatible = false;
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+        isCompatible = true;
+        }
+        return isCompatible;
+    }
+
+function upload(evt) {
+    if (!browserSupportFileUpload()) {
+        alert('The File APIs are not fully supported in this browser!');
+        } else {
+
+        	var data = null;
+            var file = evt.target.files[0];
+     
+            //console.log(file);
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function(event) {
+                var csvData = event.target.result;
+				//console.log(csvData);
+				//console.log(typeof(csvData));
+				
+               data =  d3.csv.parse(csvData);
+			   
+				//console.log(data);
+				var objectKeys = $.map(data[0], function(value, key) {
+  					return key;
+					});
+				cou = objectKeys.length; 	//total no.of column values
+                if (data && data.length > 0) {
+                 // alert('Imported -' + data.length + '- rows successfully!');
+				 parseCSV(objectKeys, data);
+                } else {
+                    alert('No data to import!');
+                }
+            };
+            reader.onerror = function() {
+                alert('Unable to read ' + file.fileName);
+            };
+    }
+}
+</script>
+
+</body>
+
+</html>

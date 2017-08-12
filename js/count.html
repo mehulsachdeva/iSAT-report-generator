@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Count</title>
+<script type="text/javascript">
+function GetCount(){
+	var newArray=['A','B','C','A','E','B','E','D','C','A'];
+	var newArray2=['High','Average','Low','Average','Average','High','Low','High','High','Low'];
+	var j;
+	var freq=[];
+	var freq2=[];
+	for(var i=0; i<newArray.length; i++)
+    {
+        var count = 1;
+        for(j=i+1; j<newArray.length; j++)
+        {
+            if(newArray[i]==newArray[j])
+            {
+                count++;  //increment count value by 1
+                freq[j] = 0;
+            }
+        }
+        if(freq[i]!=0)
+        {
+            freq[i] = count;
+        }
+    }
+    for(i=0;i<newArray.length;i++)
+    {
+    	if(freq[i]!=0){
+    	var percentage = Math.round((freq[i]/newArray.length)*100); //percentage of occurence for each element
+    	document.write(newArray[i]+"-"+freq[i]+"-"+percentage+"%");
+    	document.write("<br>");
+    	}
+    }
+    for(var i=0; i<newArray2.length; i++)
+    {
+        var count2 = 1;
+        for(j=i+1; j<newArray2.length; j++)
+        {
+            if(newArray2[i]==newArray2[j])
+            {
+                count2++;  //increment count value by 1
+                freq2[j] = 0;
+            }
+        }
+        if(freq2[i]!=0)
+        {
+            freq2[i] = count2;
+        }
+    }
+    for(i=0;i<newArray2.length;i++)
+    {
+    	if(freq2[i]!=0){
+    	var percentage = Math.round((freq2[i]/newArray2.length)*100); //percentage of occurence for each element
+    	document.write(newArray2[i]+"-"+freq2[i]+"-"+percentage+"%");
+    	document.write("<br>");
+    	}
+    }
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="GetCount()">
+</body>
+</html>
